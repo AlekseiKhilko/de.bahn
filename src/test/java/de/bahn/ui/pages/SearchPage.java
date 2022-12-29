@@ -28,18 +28,24 @@ public class SearchPage extends AbstractPage {
     private String textTravellersLocator = "//div[@id='conTravellers']";
     private String searchResultsLocator = "//div[contains(@id, 'overview_updateC1-')]";
 
+    public SearchPage() {
+        super();
+        waitForElementToBeClickable(linkSearch).click();
+    }
     public SearchPage fillAndSubmit(String from, String to, Integer travellers) {
-        linkSearch.click();
         fillForm(from, to, travellers);
-        buttonSubmit.click();
+        waitForElementToBeClickable(buttonSubmit).click();
         return this;
     }
 
     public void fillForm(String from, String to, Integer travellers) {
         waitElementsLoad(inputFrom, inputTo, selectTravellers);
-        inputFrom.sendKeys(from);
-        inputTo.sendKeys(to);
-//waitSeconds(10000);
+        if(from.length() > 0) {
+            inputFrom.sendKeys(from);
+        }
+        if(to.length() > 0) {
+            inputTo.sendKeys(to);
+        }
         if(travellers > 1) {
             waitForElementToBeClickable(selectTravellers);
             Select dropdown = new Select(selectTravellers);
@@ -62,10 +68,11 @@ public class SearchPage extends AbstractPage {
     }
 
     public Boolean isErrorMessageTo() {
-        return getErrorMessageFrom().contains("Bitte geben Sie hier eine Haltestelle ein.");
+        return getErrorMessageTo().contains("Bitte geben Sie hier eine Haltestelle ein.");
     }
 
     public Boolean existsInputFrom() {
+        waitForVisibilityOfElement(inputFrom);
         return inputFrom.isDisplayed();
     }
 

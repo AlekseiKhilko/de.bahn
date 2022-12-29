@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86ba470e-6190-4ba3-94de-7ff971f52a48" name="Changes" comment="Add change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +54,8 @@
       <recent name="de.bahn.ui.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTest.searchTwoTravellersTest">
-    <configuration name="SearchTest.searchCorrectFromAndToTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginTest">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pl-olx" />
       <extension name="coverage">
         <pattern>
@@ -65,16 +64,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchCorrectFromAndToTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchEmptyFromTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pl-olx" />
       <extension name="coverage">
         <pattern>
@@ -84,7 +82,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
       <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchEmptyFromTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest.existsInputFromTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="pl-olx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.bahn.ui.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
+      <option name="METHOD_NAME" value="existsInputFromTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -110,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchErrorMessageFromTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.searchErrorMessageToTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="pl-olx" />
       <extension name="coverage">
         <pattern>
@@ -120,25 +135,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
       <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchErrorMessageFromTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest.searchTwoTravellersTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.bahn.ui.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchTwoTravellersTest" />
+      <option name="METHOD_NAME" value="searchErrorMessageToTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTest.searchTwoTravellersTest" />
-        <item itemvalue="TestNG.SearchTest.searchCorrectFromAndToTest" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.SearchTest" />
+        <item itemvalue="TestNG.SearchTest.searchErrorMessageToTest" />
         <item itemvalue="TestNG.SearchTest.searchErrorMessageFromAndToTest" />
-        <item itemvalue="TestNG.SearchTest.searchErrorMessageFromTest" />
-        <item itemvalue="TestNG.SearchTest.searchEmptyFromTest" />
+        <item itemvalue="TestNG.SearchTest.existsInputFromTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672305618430</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add change">
+      <created>1672310968563</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672310968563</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

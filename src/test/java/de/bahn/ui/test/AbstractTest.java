@@ -16,6 +16,6 @@ public class AbstractTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown() {
-        DriverSingleton.closeDriver();
+        //DriverSingleton.closeDriver();
     }
 }

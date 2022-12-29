@@ -1,5 +1,6 @@
 package de.bahn.ui.test;
 
+import de.bahn.ui.driver.DriverSingleton;
 import de.bahn.ui.pages.HomePage;
 import de.bahn.ui.pages.SearchPage;
 import org.testng.Assert;
@@ -22,7 +23,7 @@ public class SearchTest extends AbstractTest {
 
     @AfterMethod
     public void afterMethod() {
-        //DriverSingleton.closeDriver();
+        DriverSingleton.closeDriver();
     }
 
     @Test
