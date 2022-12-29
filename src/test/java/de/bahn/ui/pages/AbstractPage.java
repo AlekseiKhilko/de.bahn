@@ -1,6 +1,7 @@
 package de.bahn.ui.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import de.bahn.ui.driver.DriverSingleton;
@@ -24,10 +25,18 @@ public class AbstractPage {
     protected AbstractPage() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
+        try {
+            Thread.sleep(1000);
+        }catch (InterruptedException e) {}
         waitForPageLoad();
     }
 
-    public void waitPageObjectLoad(WebElement ... elements) {
+    public void waitSeconds(int seconds) {
+        try {
+            Thread.sleep(seconds);
+        }catch (InterruptedException e) {}
+    }
+    public void waitElementsLoad(WebElement ... elements) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS));
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
     }
@@ -75,6 +84,11 @@ public class AbstractPage {
     protected void clickElement(WebElement element) {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
+    }
+
+    protected void moveToElement(WebElement element) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).build().perform();;
     }
 
 }
