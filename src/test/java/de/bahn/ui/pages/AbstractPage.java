@@ -31,6 +31,10 @@ public class AbstractPage {
         waitForPageLoad();
     }
 
+    public void close() {
+        DriverSingleton.closeDriver();
+    }
+
     public void waitSeconds(int seconds) {
         try {
             Thread.sleep(seconds);

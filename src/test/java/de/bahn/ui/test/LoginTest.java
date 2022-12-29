@@ -23,7 +23,7 @@ public class LoginTest extends AbstractTest {
 
     @AfterMethod
     public void afterMethod() {
-        DriverSingleton.closeDriver();
+        page.close();
     }
 
     @Test
