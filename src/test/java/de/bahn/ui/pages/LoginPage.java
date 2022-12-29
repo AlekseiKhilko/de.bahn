@@ -16,7 +16,6 @@ public class LoginPage extends AbstractPage {
     public LoginPage fillLoginForm(String username, String password) {
         fillForm(username, password);
         clickSubmit();
-
         return this;
     }
 
@@ -40,7 +39,6 @@ public class LoginPage extends AbstractPage {
 
     public String getErrorMessage(){
         String message = waitForVisibilityOfElement(messageError).getText();
-
         return message;
     }
 

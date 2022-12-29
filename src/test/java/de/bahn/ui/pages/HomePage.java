@@ -15,7 +15,6 @@ public class HomePage extends AbstractPage {
     public LoginPage clickLogin() {
         moveToElement(waitForVisibilityOfElement(linkMenuLogin));
         waitForElementToBeClickable(linkLogin).click();
-
         return new LoginPage();
     }
 
@@ -39,9 +38,7 @@ public class HomePage extends AbstractPage {
     }
 
     public SearchPage openSearchForm() {
-        //waitSeconds(3000);
         linkTikcet.click();
-
         return new SearchPage();
     }
 
