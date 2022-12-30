@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86ba470e-6190-4ba3-94de-7ff971f52a48" name="Changes" comment="Add change">
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/api/ApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/steps/LoginStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/steps/SearchStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="86ba470e-6190-4ba3-94de-7ff971f52a48" name="Changes" comment="Refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pl-olx.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/AbstractPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +40,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
@@ -62,23 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.bahn.ui.test" />
       <recent name="de.bahn.ui.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTest.existsInputFromTest">
+  <component name="RunManager" selected="TestNG.LoginTest">
     <configuration name="ApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="de.bahn" />
       <extension name="coverage">
@@ -114,18 +109,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.railwayStationsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="de.bahn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.bahn.api.*" />
+          <option name="PATTERN" value="de.bahn.ui.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.bahn.api" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.api.ApiTest" />
-      <option name="METHOD_NAME" value="railwayStationsTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -170,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.ApiTest" />
         <item itemvalue="TestNG.SearchTest.existsInputFromTest" />
         <item itemvalue="TestNG.LoginTest.existsInputUsernaemTest" />
-        <item itemvalue="TestNG.ApiTest" />
         <item itemvalue="TestNG.ApiTest.connectingTimesTest" />
-        <item itemvalue="TestNG.ApiTest.railwayStationsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672313311374</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor">
+      <created>1672391581169</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672391581169</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +240,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add" />
     <MESSAGE value="Add change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add change" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
 </project>

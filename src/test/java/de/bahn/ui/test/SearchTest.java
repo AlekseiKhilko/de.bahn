@@ -1,7 +1,5 @@
 package de.bahn.ui.test;
 
-import de.bahn.ui.driver.DriverSingleton;
-import de.bahn.ui.pages.HomePage;
 import de.bahn.ui.pages.SearchPage;
 import de.bahn.ui.steps.SearchStep;
 import org.testng.Assert;
