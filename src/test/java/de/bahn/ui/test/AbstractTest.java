@@ -8,14 +8,10 @@ import org.testng.annotations.Listeners;
 
 @Listeners(TestListener.class)
 public class AbstractTest {
-
-    @BeforeTest
-    public void logIn() {
-
-    }
-
+/*
     @AfterTest(alwaysRun = true)
     public void tearDown() {
         //DriverSingleton.closeDriver();
     }
+ */
 }

@@ -3,6 +3,7 @@ package de.bahn.ui.test;
 import de.bahn.ui.driver.DriverSingleton;
 import de.bahn.ui.pages.HomePage;
 import de.bahn.ui.pages.LoginPage;
+import de.bahn.ui.steps.LoginStep;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,9 +17,8 @@ public class LoginTest extends AbstractTest {
 
     @BeforeMethod
     public void beforeMethod() {
-        page = new HomePage()
-                .openPage()
-                .clickLogin();
+        page = new LoginStep()
+                .openLoginForm();
     }
 
     @AfterMethod

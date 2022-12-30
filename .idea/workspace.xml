@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86ba470e-6190-4ba3-94de-7ff971f52a48" name="Changes" comment="Add change">
-      <change afterPath="$PROJECT_DIR$/pl-olx.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/api/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/steps/LoginStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/steps/SearchStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pl-olx.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/pages/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/AbstractTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/bahn/ui/test/SearchTest.java" afterDir="false" />
     </list>
@@ -27,6 +33,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="cb4eec7c-6ddb-4546-8556-53db0fd504ad" />
+        <option name="url" value="https://github.com/AlekseiKhilko/de.bahn.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,22 +62,78 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.bahn.ui.test" />
       <recent name="de.bahn.ui.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchTest.existsInputToTest">
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
+  <component name="RunManager" selected="TestNG.SearchTest.existsInputFromTest">
+    <configuration name="ApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="de.bahn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.bahn.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.bahn.api" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.api.ApiTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.connectingTimesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="de.bahn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.bahn.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.bahn.api" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.api.ApiTest" />
+      <option name="METHOD_NAME" value="connectingTimesTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.railwayStationsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="de.bahn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.bahn.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.bahn.api" />
+      <option name="MAIN_CLASS_NAME" value="de.bahn.api.ApiTest" />
+      <option name="METHOD_NAME" value="railwayStationsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.existsInputUsernaemTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="de.bahn" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.bahn.ui.test.*" />
@@ -67,41 +142,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
       <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.LoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.bahn.ui.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest.existsInputToTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.bahn.ui.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="existsInputToTest" />
+      <option name="METHOD_NAME" value="existsInputUsernaemTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,8 +150,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchErrorMessageFromAndToTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
+    <configuration name="SearchTest.existsInputFromTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="de.bahn" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="de.bahn.ui.test.*" />
@@ -119,25 +160,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
       <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchErrorMessageFromAndToTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest.searchErrorMessageToTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="pl-olx" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.bahn.ui.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.bahn.ui.test" />
-      <option name="MAIN_CLASS_NAME" value="de.bahn.ui.test.SearchTest" />
-      <option name="METHOD_NAME" value="searchErrorMessageToTest" />
+      <option name="METHOD_NAME" value="existsInputFromTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTest.existsInputToTest" />
-        <item itemvalue="TestNG.SearchTest" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.SearchTest.searchErrorMessageToTest" />
-        <item itemvalue="TestNG.SearchTest.searchErrorMessageFromAndToTest" />
+        <item itemvalue="TestNG.SearchTest.existsInputFromTest" />
+        <item itemvalue="TestNG.LoginTest.existsInputUsernaemTest" />
+        <item itemvalue="TestNG.ApiTest" />
+        <item itemvalue="TestNG.ApiTest.connectingTimesTest" />
+        <item itemvalue="TestNG.ApiTest.railwayStationsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672312395448</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add change">
+      <created>1672313311374</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672313311374</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -2,7 +2,6 @@ package de.bahn.ui.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import de.bahn.ui.driver.DriverSingleton;
 import org.apache.logging.log4j.LogManager;
@@ -40,6 +39,7 @@ public class AbstractPage {
             Thread.sleep(seconds);
         }catch (InterruptedException e) {}
     }
+
     public void waitElementsLoad(WebElement ... elements) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS));
         wait.until(ExpectedConditions.visibilityOfAllElements(elements));
