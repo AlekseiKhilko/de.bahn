@@ -19,6 +19,7 @@ public class AbstractPage {
     protected WebDriver driver;
     public final int WAIT_TIMEOUT_SECONDS = 20;
     private final int CLOSE_POPUP_FRAME_INEDX = 1;
+    private final int CLOSE_POPUP_TAB_ELEMENTS_COUNT = 5;
 
     protected AbstractPage() {
         driver = DriverSingleton.getDriver();
@@ -31,7 +32,7 @@ public class AbstractPage {
         driver.switchTo().frame(CLOSE_POPUP_FRAME_INEDX);
         int i = 0;
         By byBody = By.tagName("body");
-        while (i < 5) {
+        while (i < CLOSE_POPUP_TAB_ELEMENTS_COUNT) {
             driver.findElement(byBody).sendKeys(Keys.TAB);
             i++;
         }
@@ -91,7 +92,7 @@ public class AbstractPage {
 
     protected void moveToElement(WebElement element) {
         Actions actions = new Actions(driver);
-        actions.moveToElement(element).build().perform();;
+        actions.moveToElement(element).build().perform();
     }
 
 }

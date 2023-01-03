@@ -33,12 +33,12 @@ public class SearchPage extends AbstractPage {
         waitForElementToBeClickable(linkSearch).click();
     }
     public SearchPage fillAndSubmit(String from, String to, Integer travellers) {
-        fillForm(from, to, travellers);
+        fillSearchForm(from, to, travellers);
         waitForElementToBeClickable(buttonSubmit).click();
         return this;
     }
 
-    public void fillForm(String from, String to, Integer travellers) {
+    public void fillSearchForm(String from, String to, Integer travellers) {
         waitElementsLoad(inputFrom, inputTo, selectTravellers);
         if(from.length() > 0) {
             inputFrom.sendKeys(from);

@@ -13,8 +13,8 @@ public class LoginPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='login-page__message message message-error']/span")
     private WebElement messageError;
 
-    public LoginPage fillLoginForm(String username, String password) {
-        fillForm(username, password);
+    public LoginPage fillLoginFormAndSubmit(String username, String password) {
+        fillSearchForm(username, password);
         clickSubmit();
         return this;
     }
@@ -27,7 +27,7 @@ public class LoginPage extends AbstractPage {
         return inputPassword.isDisplayed();
     }
 
-    public void fillForm(String username, String password){
+    public void fillSearchForm(String username, String password){
         waitElementsLoad(inputUsername, inputPassword);
         inputUsername.sendKeys(username);
         inputPassword.sendKeys(password);

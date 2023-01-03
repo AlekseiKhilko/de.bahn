@@ -1,13 +1,11 @@
 package de.bahn.ui.test;
 
 import de.bahn.ui.driver.DriverSingleton;
-import de.bahn.ui.pages.HomePage;
 import de.bahn.ui.pages.LoginPage;
 import de.bahn.ui.steps.LoginStep;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class LoginTest extends AbstractTest {
@@ -38,25 +36,25 @@ public class LoginTest extends AbstractTest {
 
     @Test
     public void loginNotCorrectLoginAndPasswordTest() {
-        page.fillLoginForm(TEST_USERNAME, TEST_PASSWORD);
+        page.fillLoginFormAndSubmit(TEST_USERNAME, TEST_PASSWORD);
         Assert.assertTrue(page.isErrorMessage());
     }
 
     @Test
     public void loginEmptyLoginTest() {
-        page.fillLoginForm("", TEST_PASSWORD);
+        page.fillLoginFormAndSubmit("", TEST_PASSWORD);
         Assert.assertTrue(page.isErrorMessage());
     }
 
     @Test
     public void loginEmptyPasswordTest() {
-        page.fillLoginForm(TEST_USERNAME, "");
+        page.fillLoginFormAndSubmit(TEST_USERNAME, "");
         Assert.assertTrue(page.isErrorMessage());
     }
 
     @Test
     public void loginEmptyLoginAndPasswordTest() {
-        page.fillLoginForm("", "");
+        page.fillLoginFormAndSubmit("", "");
         Assert.assertTrue(page.isErrorMessage());
     }
 }

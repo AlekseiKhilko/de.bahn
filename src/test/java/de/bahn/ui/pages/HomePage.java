@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends AbstractPage {
     private final String BASE_URL = "https://www.bahn.de/";
     @FindBy(xpath = "//a[@href='/angebot']")
-    private WebElement linkTikcet;
+    private WebElement linkTicket;
     @FindBy(xpath = "//li[contains(@class,'display-on-log-out')]//a[@class='nav__link nav__link--arrow js-sub-menu-trigger nav__link--login']")
     private WebElement linkMenuLogin;
     @FindBy(xpath = "//ul/li/a[contains(@href, 'kmu_start.post')]")
@@ -25,9 +25,8 @@ public class HomePage extends AbstractPage {
     }
 
     public SearchPage openSearchForm() {
-        linkTikcet.click();
+        linkTicket.click();
         return new SearchPage();
     }
-
 
 }
