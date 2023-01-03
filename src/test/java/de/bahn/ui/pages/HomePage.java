@@ -9,7 +9,7 @@ public class HomePage extends AbstractPage {
     private WebElement linkTikcet;
     @FindBy(xpath = "//li[contains(@class,'display-on-log-out')]//a[@class='nav__link nav__link--arrow js-sub-menu-trigger nav__link--login']")
     private WebElement linkMenuLogin;
-    @FindBy(xpath = "//a[normalize-space()='Login für Geschäftskunden']")
+    @FindBy(xpath = "//ul/li/a[contains(@href, 'kmu_start.post')]")
     private WebElement linkLogin;
 
     public LoginPage clickLogin() {
@@ -22,19 +22,6 @@ public class HomePage extends AbstractPage {
         driver.get(BASE_URL);
         closePopupAllowCookies();
         return this;
-    }
-
-    public void closePopupAllowCookies(){
-            int frameIndex = 1;
-            driver.switchTo().frame(frameIndex);
-            int i = 0;
-            By byBody = By.tagName("body");
-            while (i < 5) {
-                driver.findElement(byBody).sendKeys(Keys.TAB);
-                i++;
-            }
-            driver.findElement(byBody).sendKeys(Keys.ENTER);
-            driver.switchTo().defaultContent();
     }
 
     public SearchPage openSearchForm() {

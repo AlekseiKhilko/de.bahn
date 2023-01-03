@@ -1,14 +1,12 @@
 package de.bahn.ui.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
+import de.bahn.ui.utils.Util;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import de.bahn.ui.driver.DriverSingleton;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,24 +18,25 @@ public class AbstractPage {
     protected static final Logger logger = LogManager.getLogger();
     protected WebDriver driver;
     public final int WAIT_TIMEOUT_SECONDS = 20;
+    private final int CLOSE_POPUP_FRAME_INEDX = 1;
 
     protected AbstractPage() {
         driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
-        try {
-            Thread.sleep(1000);
-        }catch (InterruptedException e) {}
+        Util.waitSeconds(1000);
         waitForPageLoad();
     }
 
-    public void close() {
-        DriverSingleton.closeDriver();
-    }
-
-    public void waitSeconds(int seconds) {
-        try {
-            Thread.sleep(seconds);
-        }catch (InterruptedException e) {}
+    public void closePopupAllowCookies(){
+        driver.switchTo().frame(CLOSE_POPUP_FRAME_INEDX);
+        int i = 0;
+        By byBody = By.tagName("body");
+        while (i < 5) {
+            driver.findElement(byBody).sendKeys(Keys.TAB);
+            i++;
+        }
+        driver.findElement(byBody).sendKeys(Keys.ENTER);
+        driver.switchTo().defaultContent();
     }
 
     public void waitElementsLoad(WebElement ... elements) {
